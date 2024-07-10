@@ -1,5 +1,5 @@
 server:
-  port: 8761
+  port: 9999
   tomcat:
     connection-timeout: 2s
     keep-alive-timeout: 15s
@@ -8,4 +8,4 @@ server:
       min-spare: 5
 spring:
   application:
-    name: dear-comrade-discovery-service
+    name: dear-comrade-api-gateway
