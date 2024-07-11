@@ -9,9 +9,4 @@ server:
 
 spring:
   application:
-    name: dear-comrade-discovery-service
-
-eureka:
-  client:
-    register-with-eureka: false
-    fetch-registry: false
+    name: dear-comrade-law-enforcement

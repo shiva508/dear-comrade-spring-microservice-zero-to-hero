@@ -1,1 +1,125 @@
-spring.application.name=dear-comrade-spring-microservice-zero-to-hero
+server:
+  port: 8888
+  tomcat:
+    connection-timeout: 2s
+    keep-alive-timeout: 15s
+    threads:
+      max: 50
+      min-spare: 5
+spring:
+  application:
+    name: dear-comrade-config-service
+  profiles:
+    active:
+      - local
+      - uat
+      - prod
+      - dev
+      - git
+      - native
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/shiva508/dear-comrade-config
+          default_label: main
+          clone-on-start: true
+          force-pull: true
+          timeout: 5
+          #username: shiva508
+          #password: '{cipher}AQATRM/Zv1t7yy/kNxsitBW2qq/zLcqNXWURFqNzSJxaPgbojNJSxnTmx+UUvQLd6nZGDFzQfn/J0QbsGP+NFoNkBaV4p78HyKtDrpkK+jNIctAUhqEmcgeVyuhdxphOd5t3+FTCzX6dsAsP6oP3KgmMsqPAYYRnj+nSFJ1NyZ+rvNJ36If1pGHhvG3ogUTZuv/zN4mme0JTuJGWlMusT1hsZGy1ZauazFx0hgHEL3i8TzPlQ+fkb0kqMZhJW98mxQ2j2n97MUTWGNRXGZlMw0ghQV/vSXTrp0J6swqys2rXT2vbI8Bn/e094OmVgf2aLCgfiJtbC+7nbD0H0d8rccevNXEfWNhx9Qw8cUjZPX4CVvW2NJfA0ep8Kop22yVVOa2fnHnCc5HV9NXPLvXtqHh6SQ5ZPFsCrcCpb/mgO2TtFPAQoePpG5EJPzqPCGpSrxKv4/zred3Y1WWDnv/4HFlY+O3HqZnKjtVIBdBtGFtAAA=='
+          ignoreLocalSshSettings: true
+          hostKey: SHA256:Jxq0I0c1TEmfBRNMnAXSKZ5agp46RsfSFP68anrZtyw
+          hostKeyAlgorithm: ssh-rsa
+          privateKey: |
+            -----BEGIN RSA PRIVATE KEY-----
+            Proc-Type: 4,ENCRYPTED
+            DEK-Info: AES-128-CBC,39F58BC6D5F84FEC8B008F583E6F18C9
+            
+            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
+            -----END RSA PRIVATE KEY-----
+          repos:
+            dear-comrade-discovery-service:
+              clone-on-start: true
+              force-pull: true
+              pattern: dear-comrade-discovery-service*/*
+              uri: https://github.com/shiva508/dear-comrade-config
+              search-paths:
+                - spring-cloud-config-server-setup/{application}/{profile}
+
+            studentpool_notes:
+              pattern: studentpool_notes*/*
+              uri: https://github.com/shiva508/studentpool_config
+              search-paths:
+                - spring-cloud-config-server-setup/{application}/{profile}
+
+            studentpool_money:
+              pattern: studentpool_money*/*
+              uri: https://github.com/shiva508/studentpool_config
+              search-paths:
+                - spring-cloud-config-server-setup/{application}/{profile}
+            dear_comared_tutorial:
+              pattern: dear_comared_tutorial*/*
+              uri: https://github.com/shiva508/studentpool_config
+              searchPaths:
+                - spring-cloud-config-server-setup/{application}/{profile}
+logging:
+  level:
+    ROOT: INFO
+    org.spring.framework.cloud.config: DEBUG
+
+management:
+  security:
+    enabled: false
+  endpoints:
+    web:
+      exposure:
+        include: "*"

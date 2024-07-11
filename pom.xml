@@ -25,6 +25,7 @@
         <module>dear-comrade-config-service</module>
         <module>dear-comrade-discovery-service</module>
 		<module>dear-comrade-api-gateway</module>
+		<module>dear-comrade-law-enforcement</module>
 	</modules>
     <scm>
 		<connection/>
