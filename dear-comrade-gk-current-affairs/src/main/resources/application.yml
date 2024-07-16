@@ -1,5 +1,5 @@
 server:
-  port: 8082
+  port: 8081
   tomcat:
     connection-timeout: 2s
     keep-alive-timeout: 15s
@@ -9,4 +9,4 @@ server:
 
 spring:
   application:
-    name: dear-comrade-law-enforcement
+    name: dear-comrade-gk-current-affairs
