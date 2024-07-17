@@ -1,5 +1,6 @@
 package com.comrade.controller;
 
+import com.comrade.config.RecordNotFoundException;
 import com.comrade.model.LawRequest;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -18,6 +19,11 @@ public class WelcomeLawController {
                 System.out.println("httpServletRequest.getHeader(\"name\") = " + httpServletRequest.getHeader("name"));
             }
         }
-        return lawRequest.getLawName().toUpperCase();
+        if (lawRequest.getLawName() != null) {
+            return lawRequest.getLawName().toUpperCase();
+        }else {
+            throw new RecordNotFoundException("INPUT IS NULL");
+        }
+
     }
 }

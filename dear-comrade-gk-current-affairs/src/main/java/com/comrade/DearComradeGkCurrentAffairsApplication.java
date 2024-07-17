@@ -20,7 +20,7 @@ public class DearComradeGkCurrentAffairsApplication {
     public ApplicationRunner applicationRunner(RestTemplate restTemplate){
         return args -> {
             String name = "http://localhost:8082/api/law/lawName";
-            LawRequest lawRequest = new LawRequest("420");
+            LawRequest lawRequest = new LawRequest("Women accusing man");
             HttpHeaders httpHeaders = new HttpHeaders();
             httpHeaders.set("name","Shiva");
             HttpEntity<LawRequest> httpEntity = new HttpEntity<>(lawRequest, httpHeaders);
